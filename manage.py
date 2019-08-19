@@ -3,7 +3,7 @@
 import os
 import sys
 
-print("uuu")
+print("uuu1")
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'CMDB.settings')
     try:

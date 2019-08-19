@@ -6,6 +6,7 @@ app_name = 'assets'
 
 
 urlpatterns = [
+    path('test/', views.test, name='test'),
     path('report/', views.report, name='report'),
     path('dashboard/', views.dashboard, name='dashboard'),
     path('index/', views.index, name='index'),

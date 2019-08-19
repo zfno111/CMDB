@@ -8,6 +8,28 @@ from assets import asset_handler
 from django.shortcuts import get_object_or_404
 
 
+def test(request):
+    """
+    资产总表视图
+    :param request:
+    :return:
+    """
+    assets = models.Asset.objects.all()
+    return render(request, 'assets/test.html', locals())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def index(request):
     """
     资产总表视图
@@ -16,6 +38,11 @@ def index(request):
     """
     assets = models.Asset.objects.all()
     return render(request, 'assets/index.html', locals())
+
+
+
+
+
 
 
 def dashboard(request):
@@ -48,7 +75,7 @@ def detail(request, asset_id):
     :param asset_id:
     :return:
     """
-
+    #这里注意这个用法！ 固定用法
     asset = get_object_or_404(models.Asset, id=asset_id)
     return render(request, 'assets/detail.html', locals())
 
